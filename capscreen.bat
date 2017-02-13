@@ -20,7 +20,7 @@ rem ==============检测设备是否可用==============
 %adb% get-state |findstr "device">nul
 if %errorlevel% equ 0 (
     rem 设备可用
-	goto :onValidDevice
+    goto :onValidDevice
 ) else (
     rem 设备不可用
     echo 设备不可用，插上设备，检查是否开启USB调试
@@ -35,7 +35,7 @@ if "%name%"=="" (
     goto :waitCommand
 ) else (
     call :UseName "%name%"
-	goto :omega
+    goto :omega
 )
 
 rem ==============等待输入文件名==============
